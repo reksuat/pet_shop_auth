@@ -1,5 +1,4 @@
 import Scheduling from "../models/scheduling-model.js";
-import jwtService from "../services/jwt-service.js";
 
 export const store = async (req, res) => {
   try {
@@ -21,7 +20,6 @@ export const index = async (req, res) => {
 
 export const show = async (req, res) => {
   try {
-    // const content = await Scheduling.findById(req.params.id).exec();
     const content = await Scheduling.findById(req.params.id).exec();
     res.json(content);
   } catch (error) {

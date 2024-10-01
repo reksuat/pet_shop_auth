@@ -11,7 +11,7 @@ const schedulingSchema = new db.Schema({
       required: true,
     },
     animal_id: {
-      type: db.Schema.Types.ObjectId
+      type: db.Schema.Types.ObjectId,
       ref: 'Animal',
       required: true,
     },
