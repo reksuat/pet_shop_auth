@@ -6,6 +6,10 @@ const userSchema = new db.Schema({
     type: String,
     required: true,
   },
+  birthday_date: {
+    type: Date,
+    required: true
+  },
   email: {
     type: String,
     unique: true,
@@ -27,11 +31,20 @@ const userSchema = new db.Schema({
     required: true,
     default: "REC",
   },
-  cep: {
+  phones: {
+    type: Number,
+    required: true,
+    unique: true
+  },
+  adress: {
     type: Object,
     minLength: 8,
     maxLength: 8,
   },
+  house_number: {
+    type: Object,
+    type: required
+  }
 });
 
 userSchema.pre("save", async function () {
